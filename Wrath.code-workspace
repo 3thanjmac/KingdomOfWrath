@@ -1,0 +1,574 @@
+{
+	"folders": [
+		{
+			"name": "Wrath",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/Users/Shared/Epic Games/UE_5.4"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Wrath Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Wrath",
+					"Mac",
+					"Debug",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "Wrath Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Wrath",
+					"Mac",
+					"Debug",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Wrath Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "Wrath Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Wrath",
+					"Mac",
+					"Debug",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "Wrath Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Wrath",
+					"Mac",
+					"DebugGame",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "Wrath Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Wrath",
+					"Mac",
+					"DebugGame",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Wrath Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "Wrath Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Wrath",
+					"Mac",
+					"DebugGame",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "Wrath Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Wrath",
+					"Mac",
+					"Development",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "Wrath Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Wrath",
+					"Mac",
+					"Development",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Wrath Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "Wrath Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Wrath",
+					"Mac",
+					"Development",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "Wrath Mac Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Wrath",
+					"Mac",
+					"Test",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "Wrath Mac Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Wrath",
+					"Mac",
+					"Test",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Wrath Mac Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "Wrath Mac Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Wrath",
+					"Mac",
+					"Test",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "Wrath Mac Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Wrath",
+					"Mac",
+					"Shipping",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "Wrath Mac Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Wrath",
+					"Mac",
+					"Shipping",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Wrath Mac Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "Wrath Mac Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Wrath",
+					"Mac",
+					"Shipping",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "WrathEditor Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"WrathEditor",
+					"Mac",
+					"Debug",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "WrathEditor Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"WrathEditor",
+					"Mac",
+					"Debug",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"WrathEditor Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "WrathEditor Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"WrathEditor",
+					"Mac",
+					"Debug",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "WrathEditor Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"WrathEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "WrathEditor Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"WrathEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"WrathEditor Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "WrathEditor Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"WrathEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "WrathEditor Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"WrathEditor",
+					"Mac",
+					"Development",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "WrathEditor Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"WrathEditor",
+					"Mac",
+					"Development",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"WrathEditor Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "WrathEditor Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"WrathEditor",
+					"Mac",
+					"Development",
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch Wrath (Debug)",
+				"request": "launch",
+				"program": "/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Binaries/Mac/UnrealGame-Mac-Debug.app/Contents/MacOS/UnrealGame-Mac-Debug",
+				"preLaunchTask": "Wrath Mac Debug Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.4",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Wrath (DebugGame)",
+				"request": "launch",
+				"program": "/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Binaries/Mac/UnrealGame-Mac-DebugGame.app/Contents/MacOS/UnrealGame-Mac-DebugGame",
+				"preLaunchTask": "Wrath Mac DebugGame Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.4",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Wrath (Development)",
+				"request": "launch",
+				"program": "/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Binaries/Mac/UnrealGame.app/Contents/MacOS/UnrealGame",
+				"preLaunchTask": "Wrath Mac Development Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.4",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Wrath (Test)",
+				"request": "launch",
+				"program": "/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Binaries/Mac/UnrealGame-Mac-Test.app/Contents/MacOS/UnrealGame-Mac-Test",
+				"preLaunchTask": "Wrath Mac Test Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.4",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Wrath (Shipping)",
+				"request": "launch",
+				"program": "/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Binaries/Mac/UnrealGame-Mac-Shipping.app/Contents/MacOS/UnrealGame-Mac-Shipping",
+				"preLaunchTask": "Wrath Mac Shipping Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.4",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch WrathEditor (Debug)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.4/Engine/Binaries/Mac/UnrealEditor-Mac-Debug.app/Contents/MacOS/UnrealEditor-Mac-Debug",
+				"preLaunchTask": "WrathEditor Mac Debug Build",
+				"args": [
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.4",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch WrathEditor (DebugGame)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.4/Engine/Binaries/Mac/UnrealEditor-Mac-DebugGame.app/Contents/MacOS/UnrealEditor-Mac-DebugGame",
+				"preLaunchTask": "WrathEditor Mac DebugGame Build",
+				"args": [
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.4",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch WrathEditor (Development)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.4/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+				"preLaunchTask": "WrathEditor Mac Development Build",
+				"args": [
+					"/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.4",
+				"type": "lldb"
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Mac Development Build",
+				"program": "/Users/Shared/Epic Games/UE_5.4/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/Users/ethanjmac/UnrealEngine/GitHub/KingdomOfWrath/Wrath.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/Users/Shared/Epic Games/UE_5.4"
+			}
+		]
+	}
+}
