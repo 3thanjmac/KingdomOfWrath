@@ -5,14 +5,19 @@
 
 void UBasicAttributeSet::PreAttributeBaseChange(const FGameplayAttribute& Attribute, float& NewValue) const
 {
+    /** Health Clamp */
+    if (Attribute == GetHealthAttribute())
+    {
+        NewValue = FMath::Clamp(NewValue, 0, MaxHealth.GetBaseValue());
+    }
     /** Shadow Hearts Clamp */
-    if (Attribute == GetShadowHeartsAttribute())
+    else if (Attribute == GetShadowHeartsAttribute())
     {
         NewValue = FMath::Clamp(NewValue, 0, MaxShadowHearts.GetBaseValue());
     }
-    /** Health Clamp */
-    else if (Attribute == GetHealthAttribute())
+    /** Stun Clamp */
+    else if (Attribute == GetStunAttribute())
     {
-        NewValue = FMath::Clamp(NewValue, 0, MaxHealth.GetBaseValue());
+        NewValue = FMath::Clamp(NewValue, 0, MaxStun.GetBaseValue());
     }
 }
