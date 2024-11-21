@@ -33,10 +33,26 @@ public:
 	ATTRIBUTE_ACCESSORS(UBasicAttributeSet, MaxHealth);
 
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
+	FGameplayAttributeData Stun;
+	ATTRIBUTE_ACCESSORS(UBasicAttributeSet, Stun);
+
+	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
+	FGameplayAttributeData MaxStun;
+	ATTRIBUTE_ACCESSORS(UBasicAttributeSet, MaxStun);
+
+	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData ShadowHearts;
 	ATTRIBUTE_ACCESSORS(UBasicAttributeSet, ShadowHearts);
 
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData MaxShadowHearts;
 	ATTRIBUTE_ACCESSORS(UBasicAttributeSet, MaxShadowHearts);
+
+	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
+	FGameplayAttributeData Defense;
+	ATTRIBUTE_ACCESSORS(UBasicAttributeSet, Defense);
+
+	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
+	FGameplayAttributeData Level;
+	ATTRIBUTE_ACCESSORS(UBasicAttributeSet, Level);
 };
